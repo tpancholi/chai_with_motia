@@ -7,16 +7,20 @@
     "dev": "motia dev",
     "generate-types": "motia generate-types",
     "build": "motia build",
-    "clean": "rm -rf dist node_modules python_modules .motia .mermaid"
+    "clean": "rm -rf dist node_modules python_modules .motia .mermaid",
+    "format": "bunx --bun biome format --write ./steps",
+    "lint": "bunx --bun biome lint ./steps"
   },
   "keywords": [
     "motia"
   ],
   "dependencies": {
     "motia": "0.8.2-beta.139",
+    "nanoid": "^5.1.6",
     "zod": "3.24.4"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.3.1",
     "@types/react": "^19.2.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"

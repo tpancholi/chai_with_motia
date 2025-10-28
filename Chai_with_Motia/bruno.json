@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Chai_with_Motia",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
