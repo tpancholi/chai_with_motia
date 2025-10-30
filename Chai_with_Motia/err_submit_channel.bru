@@ -1,0 +1,23 @@
+meta {
+  name: err_submit_channel
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/submit
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "channel": "1234abcdefg345",
+    "email": "username@test.com"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

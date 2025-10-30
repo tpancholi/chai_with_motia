@@ -62,21 +62,24 @@ export const handler = async (eventData: any, { emit, logger, state }: any) => {
         status: "failed",
         error: "Channel not found",
       });
+      await emit({
+        topic: "yt.channel.error",
+        data: {
+          jobId,
+          email,
+        },
+      });
     } else {
-      await state.set(`job:${jobId}`, {
-        ...jobData,
-        status: "resolved channel name",
-        channelId,
-        channelName,
+      await emit({
+        topic: "yt.channel.resolved",
+        data: {
+          jobId,
+          email,
+          channelId,
+          channelName,
+        },
       });
     }
-    await emit({
-      topic: "yt.channel.resolved",
-      data: {
-        jobId,
-        email,
-      },
-    });
     return;
   } catch (error: any) {
     logger.error("Error in channel resolution handler", {
