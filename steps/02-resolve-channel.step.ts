@@ -1,9 +1,7 @@
-import type { EventConfig } from "motia";
-
 // Step 2:
 // Convert youtube handle/name to channel ID using youtube data api
 
-export const config: EventConfig = {
+export const config = {
   name: "ResolveChannel",
   type: "event",
   subscribes: ["yt.submit"],

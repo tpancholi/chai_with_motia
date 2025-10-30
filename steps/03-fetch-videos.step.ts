@@ -1,9 +1,7 @@
-import type { EventConfig } from "motia";
-
 // step 3:
-// Download latest five videos from youtube channel ID
+// Download the latest five videos from youtube channel ID
 
-export const config: EventConfig = {
+export const config = {
   name: "fetchVideos",
   type: "event",
   subscribes: ["yt.channel.resolved"],
@@ -115,7 +113,7 @@ export const handler = async (eventData: any, { emit, logger, state }: any) => {
         jobId,
         email,
         channelName,
-        error: "Failed to fetch videos.  Please try again.",
+        error: "Failed to fetch videos.  Please try again later.",
       },
     });
   }

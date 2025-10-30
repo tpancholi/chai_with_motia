@@ -1,10 +1,9 @@
-import type { ApiRouteConfig } from "motia";
 import { nanoid } from "nanoid";
 
 // Step 1:
 // Accept channel name and email from the user to start the workflow
 
-export const config: ApiRouteConfig = {
+export const config = {
   name: "SubmitChannel",
   type: "api",
   path: "/submit",
