@@ -40,16 +40,6 @@ export const handler = async (req: any, { emit, logger, state }: any) => {
         },
       };
     }
-    // validate youtube channel name
-    const channelRegex = /^@?[a-zA-Z0-9._-]{3,30}$/;
-    if (!channelRegex.test(channel)) {
-      return {
-        status: 400,
-        body: {
-          error: "Invalid channel name",
-        },
-      };
-    }
 
     const jobId = `job_${nanoid()}`;
     await state.set(`job:${jobId}`, {

@@ -14,7 +14,7 @@
     "formatWithErrors": false,
     "attributePosition": "auto",
     "lineEnding": "auto",
-    "lineWidth": 100
+    "lineWidth": 80
   },
   "linter": {
     "enabled": true,
@@ -25,7 +25,7 @@
   "javascript": {
     "formatter": {
       "quoteStyle": "double",
-      "lineWidth": 100,
+      "lineWidth": 80,
       "arrowParentheses": "always",
       "bracketSameLine": false,
       "bracketSpacing": true,

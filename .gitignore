@@ -10,3 +10,6 @@ dist
 #IDE
 .cursor/
 .idea/
+
+#ENV
+.env
