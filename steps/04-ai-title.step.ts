@@ -44,7 +44,7 @@ export const handler = async (eventData: any, { emit, logger, state }: any) => {
 
     const videoTitles = videos
       .map(
-        (v: Video, idx: number) => `$
+        (v: any, idx: number) => `$
     idx + 1;
     . "${v.title}"`,
       )
