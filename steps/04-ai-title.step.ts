@@ -7,6 +7,14 @@ export const config = {
   subscribes: ["yt.videos.fetched"],
   emits: ["yt.titles.ready", "yt.titles.error"],
 };
+interface Video {
+  videoId: string;
+  title: string;
+  url: string;
+  publishedAt: string;
+  description: string;
+  thumbnail: string;
+}
 
 interface ImprovedTitle {
   originalTitle: string;
@@ -44,7 +52,7 @@ export const handler = async (eventData: any, { emit, logger, state }: any) => {
 
     const videoTitles = videos
       .map(
-        (v: any, idx: number) => `$
+        (v: Video, idx: number) => `$
     idx + 1;
     . "${v.title}"`,
       )

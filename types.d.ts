@@ -12,7 +12,8 @@ declare module 'motia' {
   }
 
   interface Handlers {
-    'generateTitles': EventHandler<never, never>
+    'sendEmail': EventHandler<never, never>
+    'generateTitles': EventHandler<never, { topic: 'yt.titles.ready'; data: never }>
     'fetchVideos': EventHandler<never, { topic: 'yt.videos.fetched'; data: never }>
     'ResolveChannel': EventHandler<never, { topic: 'yt.channel.resolved'; data: never }>
     'SubmitChannel': ApiRouteHandler<Record<string, unknown>, unknown, { topic: 'yt.submit'; data: never }>
