@@ -61,7 +61,7 @@ export const handler = async (eventData: any, { emit, logger, state }: any) => {
     if (!response.ok) {
       const errorData = await response.json();
       throw new Error(
-        `RESEND API error: ${errorData.error?.message} || 'Unknown RESEND API error'`,
+        `RESEND API error: ${errorData.message} || 'Unknown RESEND API error'`,
       );
     }
     const emailResult = await response.json();
